@@ -25,6 +25,7 @@ jobs:
       - restore_cache:
           keys:
             - py-deps-{{ checksum "packages/ml_api/requirements.txt" }}
+            - py-deps-{{ checksum "packages/CNNModel/requirements.txt" }}
       - run:
           name: Runnning tests
           command: |
