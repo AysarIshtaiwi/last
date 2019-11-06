@@ -1,1 +1,1 @@
-web: gunicorn --pythonpath packages/ml_api --access-logfile - --error-logfile - run:application
+gunicorn project.wsgi:application --preload --workers 1
